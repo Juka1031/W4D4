@@ -39,5 +39,19 @@ class Array
         end
     arr
    end
+
+   def stock_picker
+        highest = 0
+        arr = []
+        self.each_with_index do |prices,idx|
+            self.each_with_index do |prices2,idx2|
+                if idx2 > idx && (prices2 - prices) > highest
+                    highest = (prices2 - prices)
+                    arr = [idx,idx2]
+                end
+            end
+        end
+        arr
+   end
 end
 

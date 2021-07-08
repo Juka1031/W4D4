@@ -30,5 +30,15 @@ describe Array do
             expect { array.my_transpose}.to raise_error("asd")
         end
     end
+
+     describe "#stock_picker" do
+        let(:arr) { [1,26,7,98,3,5,6,2,10000,3,4] }
+        it "should return diff between high and low" do
+            expect(arr.stock_picker).to eq ([0,8])
+        end
+
+    end
+
+ 
 end
 
