@@ -5,7 +5,12 @@ describe Tower do
     
     describe "#initialize" do    
         it  'It initialize a new instance' do
-        expect(Tower.arr1).to eq([3,2,1])
+        expect(tower.arr1).to eq([3,2,1])
+        expect(tower.arr2).to eq([])
+        expect(tower.arr3).to eq([])
+        end
+
+
     end
 
 end
