@@ -1,5 +1,5 @@
 class Tower
-    attr_reader :arr1, :arr2, :arr3
+    attr_accessor :arr1, :arr2, :arr3
     def initialize()
         @arr1 = [3,2,1]
         @arr2 = []
@@ -7,20 +7,20 @@ class Tower
     end
 
     def play
-        a = won?
-        while a
+       
+        while !won?
             put_in
             puts "----------------"
             p arr1
             p arr2
             p arr3
-            a = won?
+           
         end
         puts "you won!"
     end
 
     def won?
-        true if @arr3 == [3,2,1]
+        return true if @arr3 == [3,2,1]
         false
     end
 
