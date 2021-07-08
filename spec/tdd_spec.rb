@@ -9,5 +9,11 @@ describe Array do
 
         
     end
-
+    describe "#two_sum" do
+    let(:arr) { [-1,1,3,5,-3] }
+        it 'should return the index of the value that sum to zero' do
+            expect(arr.two_sum).to eq([[0,1],[2,4]])
+        end
+    end
 end
+
